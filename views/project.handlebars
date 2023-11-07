@@ -1,0 +1,22 @@
+<section class="section">
+    <div class="title" id="project-detail">
+        <h1>{{pname}} 🚀</h1>
+    </div>
+    <div class="project-detail-center container">
+        <h1 class="title">
+            {{project.pname}}
+        </h1>
+            <div class="img-circle">
+                <img src="/img/{{project.pimgURL}}">
+            </div>
+        <div class="project-detail">
+            <p class="project-description">{{project.pdesc}}</p>
+            <div class="project-info">
+                <span class="card-subtitle">{{project.pyear}} --- {{project.ptype}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="back-link">
+        <a href="/projects">← Back to Projects</a>
+    </div>
+</section>

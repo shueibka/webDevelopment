@@ -1,0 +1,21 @@
+<section class="menu">
+     {{#if isLoggedIn}}
+      <h2 class="logo"> Hi, {{name}}!</h2>
+        {{/if}}
+    <nav class="navbar">
+        <nav class="navigation">
+            <ul>
+                <a href="/">Home</a>
+                <a href="/gallery">Galery</a>
+                <a href="/projects">Projects</a>
+                <a href="/contacts">Contact</a>
+                <a href="/skills">Skills</a>
+                {{#if isLoggedIn}}
+                <button class="btnlogin-popup"><a href="/logout">Logout</a></button>
+                {{else}}
+                <button class="btnlogin-popup"><a href="/login">Login</a></button>
+                {{/if}}
+            </ul>
+        </nav>
+    </nav>
+</section>

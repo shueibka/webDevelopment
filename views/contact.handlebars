@@ -1,0 +1,30 @@
+<div class="container-CC">
+    <div class="title-CC">
+        <h1>Contact Information</h1>
+    </div>
+    {{#if isAdmin}}
+    <div class="project-action">
+        <a href="/contacts/new" class="btn btn-link"> New Contact </a>
+    </div>
+    {{/if}}
+    <div class="testt">
+            {{#each contacts}}
+        <div class="contact-info-CC">
+            <p><strong>Full Name:</strong> {{full_name}}</p>
+            <p><strong>Email:</strong> {{email}}</p>
+            <p><strong>Occupation:</strong> {{occupation}}</p>
+
+            {{#if ../isAdmin}}
+        <div class="admin-actions">
+            <form action="/contacts/{{contact_id}}/update" method="get">
+                <input class="important" type="submit" value="Edit" />
+            </form>
+            <form action="/contacts/{{contact_id}}/delete" method="post">
+                <input class="important" type="submit" value="Delete" />
+            </form>
+        </div>
+        {{/if}}
+        </div>
+        {{/each}}
+    </div>
+</div>

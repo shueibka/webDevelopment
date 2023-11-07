@@ -1,0 +1,49 @@
+<!-- contact me -->
+
+<div class="container">
+    <div class="title text-contact">
+        <h1> Hire me👩‍🔧</h1>
+    </div>
+
+    <div class="contact">
+        {{#if dbError}}
+        <div>
+            Sorry, there was a problem with the database:<br />
+            {{theError}}
+        </div>
+        {{else}}
+        <div class="form">
+            <form action="/contacts/new" method="post">
+                <!-- Use the action attribute to specify where the form data should be sent (e.g., /submit_contact) -->
+                <label for="full_name">Full name</label>
+                <input type="text" name="full_name" placeholder="Your name..." required>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="Your email..." required>
+
+                <label for="occupation">Occupation</label>
+                <select name="occupation" id="occupation" required>
+                    <option value="frontend">Frontend</option>
+                    <option value="backend">Backend</option>
+                    <option value="design">Design</option>
+                </select>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        {{/if}}
+    </div>
+</div>
+
+<div class="social-media">
+    <i class='bx bxl-instagram bx-tada-hover'></i>
+    <a href="http://instagram.com">Instagram</a>
+
+    <i class='bx bxl-facebook bx-tada-hover'></i>
+    <a href="http://facebook.com">Facebook</a>
+
+    <i class='bx bx-envelope bx-tada-hover'></i>
+    <a href="mailto:absh21jt@student.ju.se">Email</a>
+
+    <i class='bx bx-phone bx-tada-hover'></i>
+    <a href="tel:+123456789">Call me</a>
+</div>

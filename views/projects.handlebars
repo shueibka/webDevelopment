@@ -1,0 +1,42 @@
+
+<section class="section">
+    <div class="title" id="top-projects">
+        <h1>My Top Projects 🚀</h1>
+    </div>
+    {{#if isAdmin}}
+        <div class="project-action">
+            <a href="/projects/new" class="btn btn-link"> New project </a>
+        </div>
+    {{/if}}
+    <div class="project-center container">
+        {{#if dbError}}
+            <div>
+                Sorry, there was a problem with the database:<br />
+                {{theError}}
+            </div>
+        {{else}}
+            {{#each projects}}
+                <div class="project-detail-center">
+                    <div class=" img-circle">
+                        <a href="/projects/{{pid}}">
+                            <img src="/img/{{pimgURL}}">
+                        </a>
+                    </div>
+                    <h3>{{pname}}</h3>
+                    <div class="card-subtitle">{{pyear}} --- {{ptype}}</div>
+                    <div class="visit">
+                        <a href="/projects/{{pid}}" class="visit-link">Check it ➡️</a>
+                        {{#if ../isAdmin}}
+                            <div class="admin-actions">
+                                <a href="/projects/{{pid}}/update"> Edit </a> -
+                                <form action="/projects/{{pid}}/delete" method="post">
+                                    <input class="important" type="submit" value="Delete" />
+                                </form>
+                            </div>
+                        {{/if}}
+                    </div>
+                </div>
+            {{/each}}
+        {{/if}}
+    </div>
+</section>

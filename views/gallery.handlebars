@@ -1,0 +1,14 @@
+
+<!-- galery -->
+        <div class="galery-cotainer">
+            <div class="title" id="about">
+                <h1>Galery ✅</h1>
+            </div>
+            <div class="box container">
+                {{#each gallery}}
+                <div class="item item-{{gallery_id}}">  
+                    <img src="{{pimgURL}}" alt="">
+                </div>
+                {{/each}}
+            </div>
+        </div>

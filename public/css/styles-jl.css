@@ -1,0 +1,839 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* css-variables för contact form */
+
+ :root {
+    --primary-color: #FBBF24;
+    --secondary-color: #eff6fc;
+    --light-gray: #f5f5f5;
+    --light-orange: #fdd369;
+    --grey: #888;
+    --tex-grey: #9ca3af;
+    --black: #222;
+}
+
+
+/* css-variables för contact form */
+
+.text-contact {
+    margin-top: 3rem;
+}
+
+.contact {
+    display: flex;
+    height: 450px;
+    padding: 2rem;
+}
+
+.form {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 1px 5px -5px 2px rfba(0, 0, 0, 0.6);
+}
+
+input[type=text],
+input[type=email],
+select {
+    width: 100%;
+    padding: 12px 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: var(--light-orange);
+    transition: all 300ms ease-in-out;
+}
+
+ ::placeholder,
+#occupation {
+    font-size: 2rem;
+    opacity: 0.8;
+}
+
+#occupation {
+    color: var(--primary-color);
+}
+
+input:focus,
+#occupation:focus {
+    outline: none;
+    border: 1px solid var(--primary-color);
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5rem;
+    font-size: 3rem;
+}
+
+
+/* Reset some default styles */
+
+
+/* Style the container for the contact information view */
+
+.container-CC {
+    margin: 5rem auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #091adc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.testt {
+    display: flex;
+    align-items: center;
+}
+
+
+/* Style the title */
+
+.title-CC {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* Style the contact information */
+
+.contact-info-CC {
+    font-size: 16px;
+    padding: 10px;
+}
+
+
+/* Style the strong (bold) elements within the contact information */
+
+.contact-info-CC strong-CC {
+    font-weight: bold;
+}
+
+
+/* Add some spacing and styling to the paragraphs */
+
+.contact-info-CC p {
+    margin-bottom: 10px;
+}
+
+
+/* Add a little space around the container */
+
+
+/* Style hyperlinks */
+
+contact-info-CC a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+contact-info-CC a:hover {
+    text-decoration: underline;
+}
+
+
+/* General Styles */
+
+.body-CC {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.CC-main {
+    max-width: 600px;
+    margin-left: 500px;
+    margin-top: 500px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.CC-title {
+    text-align: center;
+}
+
+
+/* Form Styles */
+
+.CC-form {
+    margin-top: 20px;
+}
+
+.CC-fieldset {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.CC-label {
+    font-weight: bold;
+}
+
+.CC-text-input,
+.CC-select-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.CC-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.CC-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Error Message Styles */
+
+.CC-error-message {
+    color: #ff0000;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.CC-login-link {
+    font-weight: bold;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.CC-login-link:hover {
+    text-decoration: underline;
+}
+
+
+/* //////////////////////////////////////////////////////// /* galery */
+
+.galery-container {
+    background-color: var(--light-gray);
+}
+
+.box {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(8, 4vw);
+    gap: 2rem;
+}
+
+.box .item {
+    overflow: hidden;
+    border: 5px solid white;
+    border-radius: 10px;
+}
+
+.box img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-in-out;
+}
+
+.box img:hover {
+    transform: scale(1.2);
+}
+
+.item-1 {
+    grid-column: 1/3;
+    grid-row: 1/9;
+}
+
+.item-2 {
+    grid-column: 5/7;
+    grid-row: 1/9;
+}
+
+.item-3 {
+    grid-column: 3/5;
+    grid-row: 1/5;
+}
+
+.item-4 {
+    grid-column: 3/5;
+    grid-row: 5/9;
+}
+
+
+/* top-projects */
+
+
+/* Existing styles */
+
+.title h1 {
+    font-weight: 400;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.project-center {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 5rem;
+    margin-top: 5rem;
+    background: wheat;
+}
+
+.project {
+    text-align: center;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 1rem;
+    transition: all 500ms ease-in-out;
+    /* Adjusted from 500rem to 500ms */
+}
+
+.project .img-cover {
+    overflow: hidden;
+}
+
+.project img:hover {
+    transform: scale(1.2);
+}
+
+.visit-link {
+    font-size: 1.7rem;
+    color: var(--primary-color);
+    /* Ensure you've defined --primary-color somewhere in your CSS */
+}
+
+
+/* Additional styles for the new elements */
+
+.project-action {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.admin-actions {
+    margin-top: 1rem;
+    max-width: 200px;
+}
+
+
+/* //////////////////////////////////////////skills////////////////////////////////////////////// */
+
+
+/* skill */
+
+.section {
+    padding: 7rem 0 0 0;
+}
+
+.skill-center {
+    display: flex;
+    gap: 5rem;
+    background: #007BFF;
+}
+
+.section .skill {
+    border: 1px solid var(--grey);
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem lrem 2rem 1rem;
+}
+
+.skill .icon {
+    color: var(--primary-color);
+    font-size: 4rem;
+}
+
+
+/* ///////////////////////////////////////////login//////////////////////////////////////////// */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(/img/background.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 2em;
+    color: white;
+    user-select: none;
+}
+
+
+/* Add this CSS to style the .image and .form-container */
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation .btnlogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: -5s;
+}
+
+.navigation .btnlogin-popup:hover {
+    background: white;
+    color: white;
+}
+
+.navigation .btnlogin-popup a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    /* This matches the button height to vertically center the text */
+    text-decoration: none;
+    color: white;
+    /* The color of the link text */
+    margin-left: 0;
+}
+
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2p solid rgb(255 255 255 5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #162938;
+    font-size: 2em;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.form-box h2 {
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 2px solid #162938;
+    margin: 30px 0;
+    border-bottom: #162938 2px solid;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+}
+
+.remember-forgot {
+    font-size: .9em;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+    accent-color: #162938;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: #162938;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+}
+
+.Login-register {
+    font-size: .9em;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+Register p a {
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.Login-register p a:hover {
+    text-decoration: underline;
+}
+
+
+/* Additional CSS styles for your content */
+
+
+/* ///////////////////////////////////////////////////////////////////////////// / new */
+
+.add-project-form-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-project-form-container h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-group button:hover {
+    background-color: #555;
+}
+
+
+/* //////////////////////////////////////////////////////////////// */
+
+
+/* Styles for the main content area */
+
+
+/* #main {
+    display: grid;
+    grid-template-rows: repeat(8, 4vw);
+    gap: 2rem;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #e0dcdc;
+} */
+
+
+/* .container {
+    max-width: 1200px;
+    margin: 20px 20px;
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+} */
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-link {
+    background-color: blue;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.column {
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.card {
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 5rem;
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+}
+
+.card-header {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.card-title {
+    margin: 0;
+    color: #333;
+}
+
+.card-subtitle {
+    font-size: 14px;
+    color: #777;
+}
+
+.card-footer {
+    padding: 10px;
+    background-color: #f9f9f9;
+    text-align: right;
+}
+
+.important {
+    color: red;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.important:hover {
+    text-decoration: undnonerline;
+}
+
+.text-gray {
+    color: #777;
+}
+
+@media (max-width: 767px) {
+    .columns {
+        flex-direction: column;
+    }
+}
+
+
+/* ///////////////////////////////////////////////////////////projects// */
+
+.project-detail-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70vh;
+}
+
+.img-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.img-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-description {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    width: 80%;
+    max-width: 600px;
+}
+
+.back-link {
+    text-align: center;
+    margin-top: 2rem;
+}

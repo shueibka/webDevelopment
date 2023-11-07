@@ -1,0 +1,19 @@
+<section class="section skills">
+    <div class="title">
+        <h1>My skills 💪</h1>
+    </div>
+
+    <div class="skill-center container">
+        {{#each skills}}
+            <div class="skill">
+                <span class="icon"><i class="{{skill_icon}} bx-tada-hover"></i></span>
+                <h4>{{skill_name}}</h4>
+                <div class="level">
+                    {{#each skill_stars}}
+                        <i class="bx bxs-star bx-tada-hover"></i>
+                    {{/each}}
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</section>

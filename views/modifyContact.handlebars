@@ -1,0 +1,33 @@
+<section class="body-CC">
+    <div class="CC-main">
+        <div class="CC-title">
+            <h1>Modify Contact</h1>
+        </div>
+        {{#if isLoggedIn}} 
+            {{#if isAdmin}}
+                <form action="/contacts/{{contact.contact_id}}/update" method="post" class="CC-form">
+                    <fieldset class="CC-fieldset">
+                        <label for="CC-full-name" class="CC-label">Full name: </label>
+                        <input type="text" name="full_name" id="CC-full-name" class="CC-text-input" value="{{contact.full_name}}" required>
+                        <br>
+                        <label for="CC-email" class="CC-label">Email: </label>
+                        <input type="email" name="email" id="CC-email" class="CC-text-input" value="{{contact.email}}" required>
+                        <br>
+                        <label for="CC-occupation" class="CC-label">Occupation: </label>
+                        <select name="occupation" id="CC-occupation" class="CC-select-input" required>
+                            <option value="frontend" {{#if (eq contact.occupation "frontend")}}selected{{/if}}>Frontend</option>
+                            <option value="backend" {{#if (eq contact.occupation "backend")}}selected{{/if}}>Backend</option>
+                            <option value="design" {{#if (eq contact.occupation "design")}}selected{{/if}}>Design</option>
+                        </select>
+                        <br>
+                    </fieldset>
+                    <button type="submit" class="CC-button">Update Contact</button>
+                </form>
+            {{else}}
+                <p class="CC-error-message">
+                    Sorry, you must be an administrator to modify a contact!<br> Please go to the <a href="/login" class="CC-login-link">login</a> page.
+                </p>
+            {{/if}} 
+        {{/if}} 
+    </div>
+</section>
